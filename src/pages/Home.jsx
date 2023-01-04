@@ -1,4 +1,4 @@
-import React, {useEffect, useState, lazy, Suspense} from "react";
+import React, {useEffect, useState} from "react";
 import { apiconfig } from "../api/apiconfig";
 import {Loader} from "../components/Loader"
 import { Character } from "../components/Character";
@@ -24,8 +24,8 @@ export const Home = () => {
     return (
         <div className={`${loading && 'flex justify-center items-center'} w-full min-h-screen grid grid-cols-6 gap-4 bg-zinc-900`}>
             
-            {loading ? <Loader/> : character.results.map(character => (
-                <Character data={character}/>
+            {loading ? <Loader/> : character.results.map((character, index) => (
+                <Character data={character} key={character.id}/>
             ))}   
             
         </div>
