@@ -10,7 +10,7 @@ export const Character = ({data}) => {
 
     return (
         <div key={data.id} className="w-full h-full flex flex-row rounded-xl text-sm text-white bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 hover:scale-[1.02]">
-            <div className="w-[500px] h-[250px]">
+            <div className="w-[300px] h-full sm:w-[500px] sm:h-[250px]">
                 <img className="w-full h-full rounded-l-xl" src={data.image} alt={data.name} />
             </div>
             <div className="w-full h-full px-2 py-4">
