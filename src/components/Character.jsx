@@ -9,10 +9,12 @@ export const Character = ({data}) => {
     }
 
     return (
-        <div key={data.id} className="w-full h-full rounded-sm text-white text-sm hover:scale-[1.02] border-2">
-            <img src={data.image} alt={data.name} />
-            <div className="w-full h-full px-2">
-                <p className="text-lg font-bold text-white">{data.name}</p>
+        <div key={data.id} className="w-full h-full flex flex-row rounded-xl text-sm text-white bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 hover:scale-[1.02]">
+            <div className="w-[500px] h-[250px]">
+                <img className="w-full h-full rounded-l-xl" src={data.image} alt={data.name} />
+            </div>
+            <div className="w-full h-full px-2 py-4">
+                <p className="text-[1.5rem] font-bold text-white">{data.name}</p>
                 <div className="flex flex-row items-center">
                     <span className={`${status[data.status]} w-[10px] h-[10px] rounded-full`}/>
                     <p className="ml-2">{data.status} -</p>

@@ -28,3 +28,17 @@
     transform: rotate(360deg);
   }
 }
+
+/*STYLING CHARACTER CARDS*/
+.container {
+  width: 80%;
+  display: grid;
+  gap: 1rem;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: repeat(2, minmax(min(100%, 150px), 1fr));
+}
+
+.stroke_letter {
+  margin: 0;
+  -webkit-text-stroke: 1px yellowgreen;
+}

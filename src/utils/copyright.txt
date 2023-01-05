@@ -1,0 +1,5 @@
+RICK AND MORTY LOGO
+* https://www.freepnglogos.com/pics/rick-and-morty
+
+RICK AND MORTY API
+* https://rickandmortyapi.com/

@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from "react";
-import { apiconfig } from "../api/apiconfig";
+
 import {Loader} from "../components/Loader"
 import { Character } from "../components/Character";
+
+import { apiconfig } from "../api/apiconfig";
+import wallpaper from "../utils/assets/wallpaper_two.jpg"
 
 
 export const Home = () => {
@@ -18,16 +21,16 @@ export const Home = () => {
         })();
     }, [])
 
-    console.log('character')
-    console.log(character)
-
     return (
-        <div className={`${loading && 'flex justify-center items-center'} w-full min-h-screen grid grid-cols-6 gap-4 bg-zinc-900`}>
+        <div className=" w-full h-full">
+            <img className="fixed z-0 w-full h-[100vh]" src={wallpaper}  alt="wallpaper"/>
             
-            {loading ? <Loader/> : character.results.map((character, index) => (
-                <Character data={character} key={character.id}/>
-            ))}   
-            
+            <div className="z-10 relative w-[80%] grid grid-cols-2 gap-4 mx-auto pt-[10em]">
+                {loading ? <Loader/> : character.results.map((character, index) => (
+                    <Character data={character} key={character.id}/>
+                ))}   
+            </div>
+
         </div>
     )
 }
