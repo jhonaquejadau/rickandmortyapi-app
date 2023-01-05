@@ -38,7 +38,6 @@
   grid-template-columns: repeat(2, minmax(min(100%, 150px), 1fr));
 }
 
-.stroke_letter {
-  margin: 0;
+.strokeletter {
   -webkit-text-stroke: 1px yellowgreen;
 }
