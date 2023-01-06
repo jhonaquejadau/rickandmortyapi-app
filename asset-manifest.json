@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rickandmortyapi-app/static/css/main.891d420c.css",
-    "main.js": "/rickandmortyapi-app/static/js/main.47c6773a.js",
+    "main.css": "/rickandmortyapi-app/static/css/main.2cfa62a0.css",
+    "main.js": "/rickandmortyapi-app/static/js/main.6769c3f6.js",
     "static/js/787.5eff3514.chunk.js": "/rickandmortyapi-app/static/js/787.5eff3514.chunk.js",
     "static/media/logo.png": "/rickandmortyapi-app/static/media/logo.28661e7a2a2e30cef008.png",
     "static/media/wallpaper_two.jpg": "/rickandmortyapi-app/static/media/wallpaper_two.c11a72fb9e93c25fa656.jpg",
@@ -12,12 +12,12 @@
     "static/media/twitter.svg": "/rickandmortyapi-app/static/media/twitter.083438daaf1c721ea845652c3be7cf13.svg",
     "index.html": "/rickandmortyapi-app/index.html",
     "static/media/linkedin.svg": "/rickandmortyapi-app/static/media/linkedin.0615206e9500434376997884894dcce4.svg",
-    "main.891d420c.css.map": "/rickandmortyapi-app/static/css/main.891d420c.css.map",
-    "main.47c6773a.js.map": "/rickandmortyapi-app/static/js/main.47c6773a.js.map",
+    "main.2cfa62a0.css.map": "/rickandmortyapi-app/static/css/main.2cfa62a0.css.map",
+    "main.6769c3f6.js.map": "/rickandmortyapi-app/static/js/main.6769c3f6.js.map",
     "787.5eff3514.chunk.js.map": "/rickandmortyapi-app/static/js/787.5eff3514.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.891d420c.css",
-    "static/js/main.47c6773a.js"
+    "static/css/main.2cfa62a0.css",
+    "static/js/main.6769c3f6.js"
   ]
 }
