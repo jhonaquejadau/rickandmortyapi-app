@@ -1,11 +1,15 @@
 import React from "react";
 
-export const Character = ({data}) => {
+export const Character = ({data, setModal}) => {
 
     const status = {
         Alive: 'bg-green-500',
         Dead: 'bg-red-500',
         unknown: 'bg-slate-400'
+    }
+
+    const handleModal = () => {
+        setModal(true)
     }
 
     return (
@@ -21,7 +25,7 @@ export const Character = ({data}) => {
                     <p> - {data.species}</p>
                 </div>
                 <p className="text-slate-500 font-bold">Last known location:</p>
-                <p className="text-lg font-[200]">{data.location.name}</p>
+                <p onClick={handleModal} className="text-lg font-[200] hover:cursor-pointer hover:text-cyan-600 hover:font-bold">{data.location.name}</p>
                 <p className="text-slate-500 font-bold">Origin:</p>
                 <p className="text-lg font-[200]">{data.origin.name}</p>
             </div>

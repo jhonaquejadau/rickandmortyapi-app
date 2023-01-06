@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from "react";
+import {BiArrowFromRight, BiArrowFromLeft} from "react-icons/bi"
 
 import {Loader} from "../components/Loader"
 import { Character } from "../components/Character";
-import {BiArrowFromRight, BiArrowFromLeft} from "react-icons/bi"
+import { Modal } from "../components/Modal";
 
 import wallpaper from "../utils/assets/wallpaper_two.jpg"
 
@@ -11,6 +12,7 @@ export const Home = () => {
 
     const [character, setCharacter] = useState([]);
     const [page, setPage] = useState(1);
+    const [modal, setModal] = useState(false);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -31,7 +33,10 @@ export const Home = () => {
     }
 
     return (
-        <div className=" w-full h-full">
+        <div className="w-full h-full">
+            <div className="centering z-40 w-[80%] h-[80%] border-2">
+                {modal && <Modal setModal={setModal}/>}
+            </div>
             <img className="fixed z-0 w-full h-[100vh]" src={wallpaper}  alt="wallpaper"/>
 
             <div className="z-10 relative w-[85%] mx-auto pt-[8em] text-white">
@@ -41,7 +46,7 @@ export const Home = () => {
                 
                 <div className="w-full grid grid-cols-1 gap-4 lg:grid-cols-2">
                     {loading ? <Loader/> : character.results.map((character, index) => (
-                        <Character data={character} key={character.id}/>
+                        <Character data={character} setModal={setModal} key={character.id}/>
                     ))}   
                 </div>
 
