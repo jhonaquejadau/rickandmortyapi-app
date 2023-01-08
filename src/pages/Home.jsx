@@ -34,7 +34,7 @@ export const Home = () => {
 
     return (
         <div className="w-full h-full">
-            <div className="centering z-40 w-[80%] h-[80%] border-2">
+            <div className="centering z-40 w-[80%] h-[80%]">
                 {modal && <Modal setModal={setModal}/>}
             </div>
             <img className="fixed z-0 w-full h-[100vh]" src={wallpaper}  alt="wallpaper"/>
@@ -45,7 +45,7 @@ export const Home = () => {
                 <p className="text-center text-2xl mb-4">Looks for characters, locations and episodes</p>
                 
                 <div className="w-full grid grid-cols-1 gap-4 lg:grid-cols-2">
-                    {loading ? <Loader/> : character.results.map((character, index) => (
+                    {loading ? <Loader/> : character.results.map(character => (
                         <Character data={character} setModal={setModal} key={character.id}/>
                     ))}   
                 </div>
